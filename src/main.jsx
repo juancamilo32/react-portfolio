@@ -3,21 +3,29 @@ import ReactDOM from 'react-dom/client'
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet
+  Outlet,
+  useLocation
 } from "react-router-dom";
 import './index.css'
 
 import { Home, About, Projects, Contact } from './routes';
+import { Header, Navbar, Transition } from './Components'
 
-import { Header, Navbar } from './Components'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const Layout = () => {
+  const location = useLocation();
   return (
-    <div className='app'>
-      <Header />
-      <Navbar />
-      <Outlet />
-    </div>
+    <AnimatePresence mode='wait'>
+      <motion.div key={location.pathname} style={{ height: '100%' }}>
+        <Transition />
+        <div className='app'>
+          <Header />
+          <Navbar />
+          <Outlet />
+        </div>
+      </motion.div>
+    </AnimatePresence>
   )
 }
 
