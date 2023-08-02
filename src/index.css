@@ -4,10 +4,30 @@
 }
 
 body {
-  background-color: gray;
-  max-width: 100%;
+  background-image: url("./assets/site-bg.svg");
+  overflow: hidden;
+  line-height: 1.625;
+  background-size: cover;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 img {
   max-width: 100%;
+}
+
+.red-color {
+  color: #F13024;
+}
+
+.white-color {
+  color: white;
 }
