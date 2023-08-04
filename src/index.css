@@ -31,3 +31,19 @@ img {
 .white-color {
   color: white;
 }
+
+.red-hover {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+
+.red-hover:hover {
+  color: #F13024;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

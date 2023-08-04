@@ -35,16 +35,6 @@
 
 }
 
-.app-navbar-items-icon:hover {
-    color: #F13024;
-}
-
-.app-navbar-items-icon {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
-}
-
 @media screen and (min-width: 1200px) {
 
     .app-navbar {
