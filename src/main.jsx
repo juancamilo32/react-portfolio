@@ -21,12 +21,12 @@ const Layout = () => {
         <motion.div key={location.pathname} style={{ height: '100%' }}>
           <Transition />
         </motion.div>
+        <div className='app'>
+          <Header />
+          <Navbar />
+          <Outlet />
+        </div>
       </AnimatePresence>
-      <div className='app'>
-        <Header />
-        <Navbar />
-        <Outlet />
-      </div>
     </div>
   )
 }

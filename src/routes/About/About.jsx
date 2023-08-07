@@ -72,7 +72,7 @@ const About = () => {
                 <div className='app-about-container-text'>
                     <motion.h2
                         className='app-about-container-text-title'
-                        variants={fadeIn('right', 1.4)}
+                        variants={fadeIn('right', 0.4)}
                         initial='hidden'
                         animate='show'
                         exit='hidden'
@@ -81,7 +81,7 @@ const About = () => {
                     </motion.h2>
                     <motion.p
                         className='app-about-container-text-content'
-                        variants={fadeIn('right', 1.6)}
+                        variants={fadeIn('right', 0.6)}
                         initial='hidden'
                         animate='show'
                         exit='hidden'
@@ -91,7 +91,7 @@ const About = () => {
                 </div>
                 <motion.div
                     className='app-about-container-about'
-                    variants={fadeIn('left', 1.6)}
+                    variants={fadeIn('left', 0.6)}
                     initial='hidden'
                     animate='show'
                     exit='hidden'
