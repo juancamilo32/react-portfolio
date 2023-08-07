@@ -16,16 +16,18 @@ import { AnimatePresence, motion } from 'framer-motion'
 const Layout = () => {
   const location = useLocation();
   return (
-    <AnimatePresence mode='wait'>
-      <motion.div key={location.pathname} style={{ height: '100%' }}>
-        <Transition />
-        <div className='app'>
-          <Header />
-          <Navbar />
-          <Outlet />
-        </div>
-      </motion.div>
-    </AnimatePresence>
+    <div>
+      <AnimatePresence mode='wait'>
+        <motion.div key={location.pathname} style={{ height: '100%' }}>
+          <Transition />
+        </motion.div>
+      </AnimatePresence>
+      <div className='app'>
+        <Header />
+        <Navbar />
+        <Outlet />
+      </div>
+    </div>
   )
 }
 
