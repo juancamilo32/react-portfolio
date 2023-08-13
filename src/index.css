@@ -10,6 +10,9 @@ body {
   overflow: hidden;
   line-height: 1.625;
   background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
 }
 
