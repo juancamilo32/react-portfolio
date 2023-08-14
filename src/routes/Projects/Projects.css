@@ -1,0 +1,44 @@
+.app-projects {
+    height: 100%;
+    background-color: rgba(19, 20, 36, 0.3);
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    text-align: center;
+}
+
+.app-projects-title {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.app-projects-swiper {
+    max-width: 1100px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (min-width: 1200px) {
+    .app-projects-title {
+        max-width: 600px;
+        font-size: 30px;
+    }
+
+    .app-projects {
+        padding-top: 7rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .app-projects-swiper {
+        max-width: 1600px;
+    }
+}
