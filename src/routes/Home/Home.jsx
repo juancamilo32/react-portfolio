@@ -4,6 +4,9 @@ import './Home.css'
 import { Link } from 'react-router-dom'
 
 import AnimatedLetters from '../../Components/AnimatedLetters/AnimatedLetters'
+import { EarthCanvas } from '../../Components'
+import { fadeIn } from '../../animations/variants'
+import { motion } from 'framer-motion'
 
 const Home = () => {
     const [letterClass, setLetterClass] = React.useState('text-animate');
@@ -13,7 +16,7 @@ const Home = () => {
     React.useEffect(() => {
         setTimeout(() => {
             setLetterClass('text-animate-hover')
-        }, 4000)
+        }, 3000)
         return;
     }, [])
 
@@ -30,12 +33,24 @@ const Home = () => {
                     <span className={`${letterClass} _16`}>m</span>
                     <span> </span>
                     <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={17} />
-                    <br />
-                    <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={21} />
                 </h1>
-                <h2 className='app-home-text-subtitle'>Frontend web developer | Videogame developer | Systems Engineer</h2>
-                <Link to='/contact' className='app-home-text-button'>CONTACT ME</Link>
+                <motion.div
+                    variants={fadeIn('up', 1)}
+                    initial='hidden'
+                    animate='show'
+                    exit='hidden'>
+                    <h2 className='app-home-text-subtitle'>Frontend web developer | Videogame developer | Systems Engineer</h2>
+                    <Link to='/contact' className='app-home-text-button'>CONTACT ME</Link>
+                </motion.div>
             </div>
+            <motion.div
+                className='right'
+                variants={fadeIn('left', 0.6)}
+                initial='hidden'
+                animate='show'
+                exit='hidden'>
+                <EarthCanvas />
+            </motion.div>
         </div>
     )
 }

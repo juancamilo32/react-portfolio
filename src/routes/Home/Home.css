@@ -5,6 +5,10 @@
     will-change: contents;
 }
 
+.right {
+    display: none;
+}
+
 .app-home-text {
     position: absolute;
     left: 5%;
@@ -15,24 +19,24 @@
 
 .app-home-text-title {
     color: white;
-    font-size: 40px;
+    font-size: 60px;
     margin: 0;
     font-weight: 600;
-    line-height: 3.5rem;
+    line-height: 5rem;
 }
 
 .app-home-text-subtitle {
     color: #8d8d8d;
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 3px;
 }
 
 .app-home-text-button {
     color: white;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 4px;
     text-decoration: none;
     padding: 10px 18px;
@@ -45,4 +49,20 @@
 .app-home-text-button:hover {
     background-color: #F13024;
     color: #333;
+}
+
+@media screen and (min-width: 1200px) {
+    .right {
+        display: flex;
+        height: 100%;
+        width: 60%;
+        padding-left: 40rem;
+        padding-top: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .app-home-text-title {
+        font-size: 70px;
+    }
 }
