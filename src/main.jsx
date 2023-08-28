@@ -2,9 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
   createBrowserRouter,
-  RouterProvider,
+  BrowserRouter as Router,
   Outlet,
-  useLocation
+  useLocation,
+  Routes,
+  Route
 } from "react-router-dom";
 import './index.css'
 
@@ -13,51 +15,33 @@ import { Header, Navbar, Transition } from './Components'
 
 import { AnimatePresence, motion } from 'framer-motion'
 
-const Layout = () => {
+const App = () => {
   const location = useLocation();
   return (
-    <div>
+    <div className='app'>
+      <Header />
+      <Navbar />
       <AnimatePresence mode='wait'>
         <motion.div key={location.pathname} style={{ height: '100%' }}>
+          <Routes location={location} key={location.pathname}>
+            <Route index element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
           <Transition />
         </motion.div>
-        <div className='app'>
-          <Header />
-          <Navbar />
-          <Outlet />
-        </div>
       </AnimatePresence>
     </div>
   )
 }
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        path: "/",
-        element: <Home />
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/projects",
-        element: <Projects />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-    ]
-  }
-]);
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router>
+      <Routes>
+        <Route path='/*' element={<App />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
