@@ -2,15 +2,15 @@ import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
-const Earth = () => {
-    const earth = useGLTF("./model/scene.gltf");
+const Model = () => {
+    const model = useGLTF("./model/scene.gltf");
 
     return (
-        <primitive object={earth.scene} scale={1} position-y={-0.7}rotation-y={0} />
+        <primitive object={model.scene} scale={1.1} position-y={-0.83} rotation-y={0} />
     );
 };
 
-const EarthCanvas = () => {
+const ModelCanvas = () => {
     return (
         <Canvas
             shadows
@@ -26,7 +26,7 @@ const EarthCanvas = () => {
         >
             <ambientLight intensity={2} />
             <Suspense>
-                <Earth />
+                <Model />
                 <Preload all />
             </Suspense>
             <OrbitControls
@@ -39,4 +39,4 @@ const EarthCanvas = () => {
     );
 };
 
-export default EarthCanvas;
+export default ModelCanvas;

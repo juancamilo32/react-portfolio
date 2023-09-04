@@ -4,7 +4,7 @@ import './Home.css'
 import { Link } from 'react-router-dom'
 
 import AnimatedLetters from '../../Components/AnimatedLetters/AnimatedLetters'
-import { EarthCanvas } from '../../Components'
+import { ModelCanvas } from '../../Components'
 import { fadeIn } from '../../animations/variants'
 import { motion } from 'framer-motion'
 
@@ -44,12 +44,12 @@ const Home = () => {
                 </motion.div>
             </div>
             <motion.div
-                className='right'
+                className='model'
                 variants={fadeIn('left', 0.6)}
                 initial='hidden'
                 animate='show'
                 exit='hidden'>
-                <EarthCanvas />
+                <ModelCanvas />
             </motion.div>
         </div>
     )

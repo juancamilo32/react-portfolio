@@ -5,7 +5,7 @@
     will-change: contents;
 }
 
-.right {
+.model {
     display: none;
 }
 
@@ -52,12 +52,22 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .right {
+    .model {
         display: flex;
-        height: 100%;
-        width: 60%;
-        padding-left: 40rem;
-        padding-top: 2.5rem;
+        height: 80%;
+        width: 40%;
+        margin-left: 50rem;
+        padding-top: 4rem;
+        cursor: move;
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+    }
+
+    .model:active {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
     }
 }
 
