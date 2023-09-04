@@ -27,12 +27,41 @@
     line-height: 2.25rem;
 }
 
-.app-navbar-items-tooltip{
+.app-navbar-items-tooltip {
     position: absolute;
-    padding-right: 3.5rem; 
+    padding-right: 3.5rem;
     right: 0;
     display: none;
+}
 
+.app-navbar-items-tooltip-rectangle {
+    background-color: white;
+    position: relative;
+    display: flex;
+    color: #131424;
+    align-items: center;
+    padding: 6px;
+    border-radius: 3px;
+}
+
+.app-navbar-items-tooltip-text {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.app-navbar-items-tooltip-triangle {
+    border-style: solid;
+    border-left-color: white;
+    border-left-width: 8px;
+    border-right-width: 0;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    right: -0.5rem;
 }
 
 @media screen and (min-width: 1200px) {
@@ -53,6 +82,10 @@
         font-size: 1.25rem;
         line-height: 1.75rem;
         border-radius: 9999px;
+    }
+
+    .link:hover .app-navbar-items-tooltip {
+        display: flex;
     }
 }
 
