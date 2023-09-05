@@ -56,7 +56,7 @@ const aboutData = [
         title: 'awards',
         info: [
             {
-                title: 'cum laude distinction - Industrial University of Santander',
+                title: 'Cum laude distinction - Industrial University of Santander',
                 stage: '2022',
             },
         ],
