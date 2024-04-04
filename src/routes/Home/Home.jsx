@@ -39,7 +39,7 @@ const Home = () => {
                     initial='hidden'
                     animate='show'
                     exit='hidden'>
-                    <h2 className='app-home-text-subtitle'>Frontend web developer | Videogame developer | Systems Engineer</h2>
+                    <h2 className='app-home-text-subtitle'>Software Engineer | Systems Engineer | Game Developer</h2>
                     <Link to='/contact' className='app-home-text-button'>CONTACT ME</Link>
                 </motion.div>
             </div>
